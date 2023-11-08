@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper & Scissors</title>
+
+    <style>
+        body {display: flex;
+        flex-direction: column;
+        align-items: center;}
+
+        div {display: flex;
+             gap: 15px;}
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+function getComputerChoice() {
+    
+    function rockPaperScissors(){
+        return Math.floor(Math.random()*100);}
+
+    let num = rockPaperScissors();
+
+    if (num < 33) {
+        return 'Rock'
+    } else if (num >= 33 && num < 66) {
+        return 'Paper'
+    } else {
+        return 'Scissors'}
+    }
+
+    let computer =getComputerChoice()
+    let user = prompt()
+    
+    console.log(computer)
+
+    function playRound () {
+        if (computer == user) {return 'Tie';}
+        else if (computer == 'Rock' && user == 'Paper' || 
+        computer == 'Paper' && user == 'Scissors' ||
+        computer == 'Scissors' && user == 'Rock'){
+            return 'User wins'}
+        else {return 'Computer wins'}
+    }
+
+    console.log(playRound())
+
+
+
+
+
+
+/*for(let i = 0; i < 5; i++) {
+    console.log(game())   
+}*/
+              
+          
+
+
+
+        
+
+
+           
+
+    </script>
+</body>
+</html>
