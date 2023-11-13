@@ -35,39 +35,102 @@ function getComputerChoice() {
         return 'Scissors'}
     }
 
-    let computer =getComputerChoice()
-    let user = prompt()
+
+  
+    const computer =getComputerChoice()
+    const user = prompt('Answer ').toLowerCase()
+
+        function firstRound (a,b) {
+            if (a == b) {return 'Tie';}
+            else if (a == 'Rock' && b == 'Paper' || 
+                     a == 'Paper' && b == 'Scissors' ||
+                     a == 'Scissors' && b == 'Rock'){
+                return 'User wins'}
+            else {return 'Computer wins'}
+        }
+
+    const computer1 =getComputerChoice()
+    const user1 = prompt('Answer ').toLowerCase()
+
+        function secondRound (a,b) {
+            if (a == b) {return 'Tie';}
+            else if (a == 'Rock' && b == 'Paper' || 
+                     a == 'Paper' && b == 'Scissors' ||
+                     a == 'Scissors' && b == 'Rock'){
+                return 'User wins'}
+            else {return 'Computer wins'}
+        }
     
-    console.log(computer)
+    const computer2 =getComputerChoice()
+    const user2 = prompt('Answer ').toLowerCase()
 
-    function playRound () {
-        if (computer == user) {return 'Tie';}
-        else if (computer == 'Rock' && user == 'Paper' || 
-        computer == 'Paper' && user == 'Scissors' ||
-        computer == 'Scissors' && user == 'Rock'){
-            return 'User wins'}
-        else {return 'Computer wins'}
-    }
+        function thirdRound (a,b) {
+            if (a == b) {return 'Tie';}
+            else if (a == 'Rock' && b == 'Paper' || 
+                     a == 'Paper' && b == 'Scissors' ||
+                     a == 'Scissors' && b == 'Rock'){
+                return 'User wins'}
+            else {return 'Computer wins'}
+        }
 
-    console.log(playRound())
+    const computer3 =getComputerChoice()
+    const user3 = prompt('Answer ').toLowerCase()
+
+        function fourthRound (a,b) {
+            if (a == b) {return 'Tie';}
+            else if (a == 'Rock' && b == 'Paper' || 
+                     a == 'Paper' && b == 'Scissors' ||
+                     a == 'Scissors' && b == 'Rock'){
+                return 'User wins'}
+            else {return 'Computer wins'}
+        }
+
+    const computer4 =getComputerChoice()
+    const user4 = prompt('Answer ').toLowerCase()
+
+        function fifthRound (a,b) {
+            if (a == b) {return 'Tie';}
+            else if (a == 'Rock' && b == 'Paper' || 
+                     a == 'Paper' && b == 'Scissors' ||
+                     a == 'Scissors' && b == 'Rock'){
+                return 'User wins'}
+            else {return 'Computer wins'}
+        }
+
+    let firstResult = firstRound(computer,user)
+    let secondResult = secondRound(computer1,user1)
+    let thirdResult = thirdRound(computer2,user2)
+    let fourthResult = fourthRound(computer3, user3)
+    let fifthResult = fifthRound(computer4,user4)
+
+    let results = [firstResult, secondResult,thirdResult,fourthResult,fifthResult ]
 
 
-
-
-
-
-/*for(let i = 0; i < 5; i++) {
-    console.log(game())   
-}*/
-              
-          
-
-
+ console.log(results)
+    
 
         
+let userWinsCount = 0;
+let computerWinsCount = 0;
+
+for (let result of results) {
+    if (result === 'User wins') {
+        userWinsCount++;
+    } else if (result === 'Computer wins') {
+        computerWinsCount++;
+    }
+}
+
+if (userWinsCount > 2) {
+    console.log('GG, WP');
+} else if (computerWinsCount > 2) {
+    console.log('HA HA');
+} else {
+    console.log('again');
+}
+    
 
 
-           
 
     </script>
 </body>
