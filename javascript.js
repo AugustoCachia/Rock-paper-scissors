@@ -30,17 +30,15 @@ let computerScore = 0;
 
 for (let i= 0; i < 5; i++) {
 
-    let userChoice = prompt().toLowerCase()
-    userChoice.focus()
+    let userChoice = prompt().toLowerCase();
+    
 
-    let computerChoice = choice().toLowerCase()
+    let computerChoice = choice().toLowerCase();
     
     let result = versus(userChoice, computerChoice)
 
     console.log(computerChoice);
     console.log(result);
-
-
 
     if (result == 'User wins') {userScore++}
     else if (result == 'Computer wins') {computerScore++};

@@ -1,0 +1,42 @@
+* {
+   border: 1px solid rgb(223, 29, 29);
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {display: flex;
+   flex-direction: column;
+   align-items: center;
+   min-height: 100vh;
+}
+
+.selection,
+.score,
+.results {
+   height:fit-content;
+   width: 150px;
+   margin: 15px;
+   text-align: center;
+}
+
+.selection {
+   width: fit-content;
+   height: min-content;
+}
+
+.score {
+   display: flex;
+   justify-content:space-evenly;
+}
+
+.user {
+   flex-grow: 3
+}
+.computer {
+   flex-grow: 1
+}
+
+.total {
+   text-align: center;
+}
